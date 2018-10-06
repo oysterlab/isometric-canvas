@@ -76,8 +76,8 @@ const render = (t) => {
       }
 
       const r = 100 + Math.sqrt(f * 0.3) * 150//parseInt(Math.random() * 255)
-      const g = 30 - Math.sqrt(f * 0.1) * 50//parseInt(Math.random() * 255)
-      const b = 30 - Math.sqrt(f * 0.1) * 50//parseInt(Math.random() * 255)
+      const g = 50 - Math.sqrt(f * 0.1) * 70//parseInt(Math.random() * 255)
+      const b = 50 - Math.sqrt(f * 0.1) * 70//parseInt(Math.random() * 255)
 
       const h = -(BLOCK_MAX_HEIGHT * 0.1) - (BLOCK_MAX_HEIGHT * Math.pow((f + 0.5), 2) * 0.5)
 
