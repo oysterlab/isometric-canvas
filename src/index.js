@@ -69,16 +69,17 @@ const render = (t) => {
   
     let sum = 0
     blocks.forEach(({x, y}, i) => {
-      const r = 140 + prevAvg * 20 - i * 0.3//parseInt(Math.random() * 255)
-      const g = 60 - prevAvg * 40 - i * 0.3//parseInt(Math.random() * 255)
-      const b = 60 - prevAvg * 40 - i * 0.3//parseInt(Math.random() * 255)
-
       let f = Math.abs(Math.sin(0.8 * Math.PI * i / blocks.length + t * 0.004)) * 0.001
       if (frequency.length > 0) {
         f += frequency[i + 20] / 128
         sum += frequency[i + 20] / 128
       }
-      const h = -(BLOCK_MAX_HEIGHT * 0.1) - (BLOCK_MAX_HEIGHT * 0.9 * Math.pow((f + 0.5), 2) * 0.5)
+
+      const r = 100 + f * 100//parseInt(Math.random() * 255)
+      const g = 30 - f * 20//parseInt(Math.random() * 255)
+      const b = 30 - f * 20//parseInt(Math.random() * 255)
+
+      const h = -(BLOCK_MAX_HEIGHT * 0.1) - (BLOCK_MAX_HEIGHT * Math.pow((f + 0.5), 2) * 0.5)
 
       const m = 0 //parseInt(-(1. - r) * 20)
   
