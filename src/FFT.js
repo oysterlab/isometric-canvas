@@ -20,9 +20,9 @@ class FFT {
 
             audio.removeEventListener('ended', this_.start)
             audio.addEventListener('ended', this_.start)
-            this_.start()
 
             audio.onloadeddata = () => {
+                this_.start()
                 this_.analyser = analyser
                 this_.frequencyData = new Uint8Array(analyser.frequencyBinCount)
                 resolve()
